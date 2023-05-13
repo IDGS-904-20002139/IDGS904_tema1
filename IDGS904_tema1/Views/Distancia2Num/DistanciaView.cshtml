@@ -1,0 +1,41 @@
+﻿@model IDGS904_tema1.Models.Distancia2Num
+
+@{
+    ViewBag.Title = "DistanciaView";
+}
+
+<h2>DistanciaView</h2>
+
+<h2>Calcular</h2>
+<div class="container">
+    <div class="row div col-lg-6">
+        <form action="/" method="POST">
+            <div>
+                <label>X1:</label>
+                <input type="number" name="x1" value="" />
+            </div>
+            <br />
+            <div>
+                <label>X2:</label>
+                <input type="number" name="x2" value="" />
+            </div>
+            <br />
+            <div>
+                <label>Y1:</label>
+                <input type="number" name="y1" value="" />
+            </div>
+            <br />
+            <div>
+                <label>Y2:</label>
+                <input type="number" name="y2" value="" />
+            </div>
+            <br />
+            <input type="submit" name="cal" value="calcular" />
+        </form>
+    </div>
+    <div class="row div col-lg-6">
+        <h1>El resultado es: @Html.DisplayFor(model => model.Res)</h1>
+        @*<h1>@Html.ActionLink("Calcular", "Resultado", "Distancia2Num", null,
+        new { dato = "", @class = "btn btn-danger" })</h1>*@
+    </div>
+</div>
