@@ -10,27 +10,35 @@ namespace IDGS904_tema1.Controllers
     public class Distancia2NumController : Controller
     {
         // GET: Distancia2Num
-        public ActionResult Index()
+        public ActionResult DistanciaView(Distancia2Num distancia2Num)
         {
-            return View();
+            if (distancia2Num.x1 == 0) 
+            {
+                return View(); 
+            }
+            else 
+            {
+                return RedirectToAction("Calcular", "Distancia2Num", distancia2Num);
+            }
+            
         }
-        public ActionResult DistanciaView(Distancia2Num op)
+        /*public ActionResult DistanciaView(Distancia2Num op)
         {
             var model = new Distancia2Num();
             model.Res = op.Dist();
-            TempData["Resu"] = model.Res;
             return View(model);
-        }
-        /*public ActionResult Resultado()
-        {
-            string resul = "";
-            if (TempData.ContainsKey("Resu"))
-            {
-                resul = TempData["Resu"] as string;
-            }
-            ViewBag.resultado = resul;
-
-            return View();
         }*/
+
+
+        public ActionResult Calcular(Distancia2Num distancia2Num)
+        {
+            return Redirect("Resultado");
+        }
+        public ActionResult Resultado(Distancia2Num distancia2Num)
+        {
+            double resultado = distancia2Num.Dist();
+            TempData["Resu"] = resultado.ToString();
+            return View();
+        }
     }
 }

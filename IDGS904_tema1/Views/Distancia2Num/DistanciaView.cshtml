@@ -9,7 +9,7 @@
 <h2>Calcular</h2>
 <div class="container">
     <div class="row div col-lg-6">
-        <form action="/" method="POST">
+        <form action="/Distancia2Num/Resultado" method="POST">
             <div>
                 <label>X1:</label>
                 <input type="number" name="x1" value="" />
@@ -32,10 +32,5 @@
             <br />
             <input type="submit" name="cal" value="calcular" />
         </form>
-    </div>
-    <div class="row div col-lg-6">
-        <h1>El resultado es: @Html.DisplayFor(model => model.Res)</h1>
-        @*<h1>@Html.ActionLink("Calcular", "Resultado", "Distancia2Num", null,
-        new { dato = "", @class = "btn btn-danger" })</h1>*@
     </div>
 </div>

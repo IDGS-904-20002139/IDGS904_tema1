@@ -1,0 +1,46 @@
+﻿@model IDGS904_tema1.Models.Alumnos
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar</h2>
+
+@using (Html.BeginForm()) 
+{ 
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(mode => Model.nombre, htmlAttributes:
+           new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(mode => Model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(mode => Model.edad, htmlAttributes:
+           new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(mode => Model.edad, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(mode => Model.activo, htmlAttributes:
+           new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(mode => Model.activo, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(mode => Model.inscripto, htmlAttributes:
+           new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(mode => Model.inscripto, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" name="name" value="Registrar"/>
+        </div>
+    </div>
+}
