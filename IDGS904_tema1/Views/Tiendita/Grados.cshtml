@@ -11,17 +11,10 @@
 {
     <div class="form-horizontal">
         <div class="form-group">
-            @Html.LabelFor(mode => Model.fahrenheit, htmlAttributes:
+            @Html.LabelFor(mode => Model.value, htmlAttributes:
            new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(mode => Model.fahrenheit, new { htmlAttributes = new { @class = "form-control" } })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(mode => Model.centigrados, htmlAttributes:
-           new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(mode => Model.centigrados, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(mode => Model.value, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
         <div class="form-group">

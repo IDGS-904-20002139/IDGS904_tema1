@@ -9,8 +9,7 @@ namespace IDGS904_tema1.Models
 {
     public class Grados
     {
-        public double centigrados { get; set; }
-        public double fahrenheit { get; set; }
+        public double value { get; set; }
         public int radio { get; set; }
         public double result { get; set; }
 
@@ -21,13 +20,13 @@ namespace IDGS904_tema1.Models
 
         public double calcularGrados()
         {
-            if (radio == 1) 
-            { 
-                this.result = ((this.fahrenheit - 32) * (1 / 1.8));
+            if (radio == 1)
+            {
+                this.result = ((this.value - 32) * (1 / 1.8));
             }
             if (radio == 2)
             {
-                this.result = ((this.centigrados * 1.8) + 32);
+                this.result = ((this.value * 1.8) + 32);
             }
             return this.result;
         }
